@@ -1,0 +1,340 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.3, 10 May 2020) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% This fork/modified version has been made by Nicolás Omar González Passerino (nicolas.passerino@gmail.com, 15 Oct 2020)
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicons fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.2cm,right=1.2cm,top=1cm,bottom=1cm,columnsep=0.75cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+  \setmainfont{Roboto Slab}
+  \setsansfont{Lato}
+  \renewcommand{\familydefault}{\sfdefault}
+\else
+  % If using pdflatex:
+  \usepackage[rm]{roboto}
+  \usepackage[defaultsans]{lato}
+  % \usepackage{sourcesanspro}
+  \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+% ----- LIGHT MODE -----
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{PrimaryColor}{HTML}{001F5A}
+\definecolor{SecondaryColor}{HTML}{0039AC}
+\definecolor{ThirdColor}{HTML}{F3890B}
+\definecolor{BackgroundColor}{HTML}{E2E2E2}
+\colorlet{name}{PrimaryColor}
+\colorlet{tagline}{PrimaryColor}
+\colorlet{heading}{PrimaryColor}
+\colorlet{headingrule}{ThirdColor}
+\colorlet{subheading}{SecondaryColor}
+\colorlet{accent}{SecondaryColor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+\pagecolor{BackgroundColor}   
+% ----- DARK MODE -----
+%\definecolor{BackgroundColor}{HTML}{242424}
+%\definecolor{SlateGrey}{HTML}{6F6F6F}
+%\definecolor{LightGrey}{HTML}{ABABAB}
+%\definecolor{PrimaryColor}{HTML}{3F7FFF}
+%\colorlet{name}{PrimaryColor}
+%\colorlet{tagline}{PrimaryColor}
+%\colorlet{heading}{PrimaryColor}
+%\colorlet{headingrule}{PrimaryColor}
+%\colorlet{subheading}{PrimaryColor}
+%\colorlet{accent}{PrimaryColor}
+%\colorlet{emphasis}{LightGrey}
+%\colorlet{body}{LightGrey}
+%\pagecolor{BackgroundColor}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+\renewcommand{\personalinfofont}{\small\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+%% \addbibresource{sample.bib}
+
+\begin{document}
+    \name{Luiz Rennó Costa}
+    \tagline{Data Scientist | Data Engineer | Machine Learning Engineer}
+    %% You can add multiple photos on the left or right
+    % \photoL{4cm}{john-doe}
+    
+    \personalinfo{
+        \email{luizrennocosta@gmail.com}\smallskip
+        \phone{+5521-99364-4383}
+        \location{Rio de Janeiro, Brazil}\\
+        \linkedin{luiz-rennó-costa}
+        \github{luizrennocosta}
+        % \dev{johnDoe}
+        %\homepage{nicolasomar.me}
+        %\medium{nicolasomar}
+        %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+        % \orcid{0000-0000-0000-0000}
+        %% You can add your own arbtrary detail with
+        %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+        % \printinfo{\faPaw}{Hey ho!}[https://example.com/]
+        %% Or you can declare your own field with
+        %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+        \NewInfoField{gitlab}{\faGitlab}[https://www.gitlab.com/]
+        \gitlab{luizrennocosta}
+    }
+    
+    \makecvheader
+    %% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+    % \AtBeginEnvironment{itemize}{\small}
+    
+    %% Set the left/right column width ratio to 6:4.
+    \columnratio{0.25}
+
+    % Start a 2-column paracol. Both the left and right columns will automatically
+    % break across pages if things get too long.
+    \begin{paracol}{2}
+        % ----- STRENGTHS -----
+        \cvsection{Strengths}
+            \cvtag{Python}
+            \cvtag{pandas}
+            \cvtag{numpy}
+            \cvtag{sklearn}
+            \cvtag{keras}
+            \cvtag{tensorflow}
+            \divider
+            
+            \cvtag{Data Wrangling}
+            \cvtag{ETL/ELT}
+            \cvtag{ML Modelling}
+            \cvtag{ML Pipelines}
+            \divider
+            
+            \cvtag{Docker}
+            \cvtag{Kubernetes}
+            \cvtag{SQL/NoSQL}
+            \cvtag{Airflow}
+            \cvtag{PySpark}
+            \cvtag{Hadoop}
+            
+            \divider
+            
+            \cvtag{GCP}
+            \cvtag{Git}
+            \cvtag{Linux}
+        % ----- STRENGTHS -----
+        
+        % ----- LEARNING -----
+        \cvsection{Learning}
+            \cvtag{Deep Learning}
+            \cvtag{pytorch}
+            
+            \cvtag{Reinforced Learning}
+            \medskip
+            
+            \cvtag{Audio Processing}
+        % ----- LEARNING -----
+        
+        % ----- LANGUAGES -----
+        \cvsection{Languages}
+            \cvlang{Portuguese}{Native}\\
+            \divider
+            
+            \cvlang{English}{Fluent}
+            %% Yeah I didn't spend too much time making all the
+            %% spacing consistent... sorry. Use \smallskip, \medskip,
+            %% \bigskip, \vpsace etc to make ajustments.
+            \smallskip
+        % ----- LANGUAGES -----
+            
+        % ----- REFERENCES -----
+        \cvsection{References}
+            \cvref{Ref 1}{Felipe de Albuquerque}
+            \divider
+            
+            \cvref{Ref 2}{Arthur Lemos}
+            \divider
+        % ----- REFERENCES -----
+        
+        % ----- MOST PROUD -----
+        \newpage
+        \cvsection{Achievements}
+        
+        \cvachievement{\faTrophy}{Honorable Mention}{Prize awarded for the 5 finalists (of over 1000) students at the
+        7th Week of Academic Integration at UFRJ}\\
+        \cvachievement{\faTrophy}{Hackathon Winner}{Winner of the first Hackathon hosted at UFRJ}\\
+        \cvachievement{\faHeartbeat}{Completed \textit{Deep Learning} Specialization on Coursera}{The courses included:
+        \begin{itemize}
+            \item Neural Networks and Deep Learning
+            \item Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+            \item Structuring Machine Learning Projects
+            \item Convolutional Neural Networks
+            \item Sequence Models
+        \end{itemize}}
+        % ----- MOST PROUD -----
+        
+        % \cvsection{A Day of My Life}
+        
+        % Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+        % \wheelchart{outer radius}{inner radius}{
+        % comma-separated list of value/text width/color/detail}
+        % \wheelchart{1.5cm}{0.5cm}{%
+        %   6/8em/accent!30/{Sleep,\\beautiful sleep},
+        %   3/8em/accent!40/Hopeful novelist by night,
+        %   8/8em/accent!60/Daytime job,
+        %   2/10em/accent/Sports and relaxation,
+        %   5/6em/accent!20/Spending time with family
+        % }
+        
+        % use ONLY \newpage if you want to force a page break for
+        % ONLY the current column
+        \newpage
+        
+        %% Switch to the right column. This will now automatically move to the second
+        %% page if the content is too long.
+        \switchcolumn
+        
+        % ----- ABOUT ME -----
+        \cvsection{About Me}
+            \begin{quote}
+                Hello, I'm Luiz, a MSc in Electrical Engineering focused on Machine Learning research, currently working 
+                on the Data Engineering field on a quest to become a full-fledged specialist on the Data and Machine Learning fields. I enjoy tough challenges and thinking outside the box in order to solve them. 
+                
+            \end{quote}
+        % ----- ABOUT ME -----
+        
+        % ----- EXPERIENCE -----
+        \cvsection{Experience}
+            \cvevent{Data Engineer }{| Dextra Consulting}{12/2020 -- Present}{Remote}
+            \begin{itemize}
+                \item Creation of Spark jobs for the execution of Machine Learning models on a Hadoop environment.
+            \end{itemize}
+            \divider
+            
+            \cvevent{Data Engineer }{| Samsung Electronics}{01/2020 -- 09/2020}{Campinas, Brazil}
+            \begin{itemize}
+                \item Data extraction procedure automation using a distributed architecture with Apache Airflow and Docker
+                \item Creation of spark jobs for data indexing and logging of metadata.
+                \item Relational database architecture and modeling for event logging
+                \item General automation of procedures and ETLs using Bash, Python, and Docker
+                \item Development of database-interface APIs using NodeJS
+            \end{itemize}
+            \divider
+            
+            \cvevent{Data Scientist }{| Grupo SOMA}{07/2019 -- 12/2019}{Rio de Janeiro, Brazil}
+            \begin{itemize}
+                \item Implementation of a cluster using Kubernetes (GKE) for the orchestration of dockerized ETLs in Python.
+                \item Creation of a scalable development platform used for several projects using Jupyter Hub hosted in a cluster with Kubernetes.
+                \item Development of a workshop on data science, machine learning models and their applications.
+                \item Implementation of a supervised model to predict sales of new products based on historical data and visual
+                characteristics, with direct development on the whole machine learning chain, from data processing to serving
+                the model through a REST API using Flask.
+                \item Establishment of a work flow to analyze and compare machine learning models using MLFlow.
+            \end{itemize}
+            \divider
+
+            \cvevent{Masters Scholarship }{| COPPETEC}{03/2017 -- 03/2019}{Rio de Janeiro, Brazil}
+            \begin{itemize}
+                \item Development of an autonomous system for defect propagation monitoring based on acoustic emission on rigid pipes
+            \end{itemize}
+            \divider
+            \newpage
+            \cvevent{Academic Internship }{| Biomedical Engineering Program - UFRJ}{2016 -- 2017}{Rio de Janeiro, Brazil}
+            \begin{itemize}
+                \item Research in applied control for bio medicine, with a focus on the rehabilitation of patients with Spasticity.
+            \end{itemize}
+            \divider
+        % ----- EXPERIENCE -----
+        
+        % ----- EDUCATION -----
+        \cvsection{Education}
+            \cvevent{MSc. in Electrical Engineering}{| Federal University Of Rio de Janeiro}{03/2017 -- 04/2019}{Rio de Janeiro, Brazil}
+            \begin{itemize}
+                \item GPA: 2.88/3.0 (A)
+                \item Study and research on applied machine learning techniques and models for a project in the Oil and Gas industry in colaboration with PETROBRAS.
+            \end{itemize}
+            \divider
+            
+            \cvevent{BSc. in Electronics and Computer Engineering}{| Federal University Of Rio de Janeiro}{03/2013 -- 03/2019}{Rio de Janeiro, Brazil}
+            \begin{itemize}
+                \item GPA: 8.3/10.0
+            \end{itemize}
+        % ----- EDUCATION -----
+        
+        % ----- PROJECTS -----
+        \cvsection{Projects}
+            \cvevent{Anime Opening Rate (WIP)}{}{01/2021 -- Present}{}
+            \begin{itemize}
+                \item Trying to define if it is possible to guess an anime's overall rate on My Anime List using only it's opening song. An approach using Deep Learning and classic Signal Processing techniques.
+            \end{itemize}
+            \divider
+            
+            \cvevent{Kubeflow ML Pipeline }{\cvrepo{| \faGithub}{https://github.com/luizrennocosta/kubeflow-ml-pipeline}}{11/2020}{}
+            \begin{itemize}
+                \item A hands-on project for learning about Kubeflow's ML Pipelines. Consists of a 6-staged pipeline from data ingesting all the way to model deployment.
+            \end{itemize}
+            \divider
+            
+            \cvevent{Binary Animal Game }{\cvrepo{| \faGithub}{https://github.com/luizrennocosta/binary-animal-game}}{11/2020}{}
+            \begin{itemize}
+                \item An Object-Oriented approach to a simple guessing game where you can define yes-no questions. 
+            \end{itemize}
+            \divider
+            
+            \cvevent{RS State Procurement Data Study }{\cvrepo{| \faGithub}{https://github.com/luizrennocosta/RS-procurement-data-study}}{09/2020}{}
+            \begin{itemize}
+                \item A study of grants and procurement of the Rio Grande do Sul state. 
+            \end{itemize}
+            \divider
+            
+            \cvevent{Energy Consumption Management System  }{}{05/2016}{}
+            \begin{itemize}
+                \item Winner project of the 1st Hackathon UFRJ.Development of the software and hardware of an energy consumption management project, that remotely controls air conditioning devices, written in C++.
+            \end{itemize}
+            \divider
+            
+            \cvevent{Quadcopter Flight Control and Build }{\cvrepo{| \faBitbucket}{https://bitbucket.org/thiagolobo/ff2/src/master}\cvrepo{| \faYoutube }{https://youtu.be/nZHSf6RAbXM}}{04/2015 -- 08/2015}{}
+            \begin{itemize}
+                \item Development of the entire quadcopter's control unit using Arduino.
+            \end{itemize}
+        % ----- PROJECTS -----
+    \end{paracol}
+\end{document}
