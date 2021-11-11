@@ -144,8 +144,8 @@
             
             \cvtag{Data Wrangling}
             \cvtag{ETL/ELT}
-            \cvtag{ML Modelling}
             \cvtag{ML Pipelines}
+            \cvtag{ML Modelling}
             \divider
             
             \cvtag{Docker}
@@ -158,6 +158,8 @@
             \divider
             
             \cvtag{GCP}
+            \cvtag{Firebase}
+            \cvtag{Dataproc}
             \cvtag{Git}
             \cvtag{Linux}
         % ----- STRENGTHS -----
@@ -190,7 +192,10 @@
             \cvref{Ref 1}{Felipe de Albuquerque}
             \divider
             
-            \cvref{Ref 2}{Arthur Lemos}
+            \cvref{Ref 2}{Fabio Valonga}
+            \divider
+            
+            \cvref{Ref 3}{Fulvio Neto}
             \divider
         % ----- REFERENCES -----
         
@@ -201,7 +206,7 @@
         \cvachievement{\faTrophy}{Honorable Mention}{Prize awarded for the 5 finalists (of over 1000) students at the
         7th Week of Academic Integration at UFRJ}\\
         \cvachievement{\faTrophy}{Hackathon Winner}{Winner of the first Hackathon hosted at UFRJ}\\
-        \cvachievement{\faHeartbeat}{Completed \textit{Deep Learning} Specialization on Coursera}{The courses included:
+        \cvachievement{\faBookmark}{Completed \textit{Deep Learning} Specialization on Coursera}{The courses included:
         \begin{itemize}
             \item Neural Networks and Deep Learning
             \item Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
@@ -209,6 +214,14 @@
             \item Convolutional Neural Networks
             \item Sequence Models
         \end{itemize}}
+        \cvachievement{\faBookmark}{Published Articles}{
+        \begin{itemize}
+            \item \href{https://pubmed.ncbi.nlm.nih.gov/28363767/}{\textit{Medical Engineering \& Physics} \faBook}
+            \item \href{https://www.tandfonline.com/doi/full/10.1080/09349847.2021.1930305}{Research in Nondestructive Evaluation \faBook}
+            \item \href{https://abmproceedings.com.br/ptbr/article/identificao-do-estgio-de-propagao-de-descontinuidade-em-um-corpo-rgido-tubular-utilizando-emisso-acstica-e-redes-neurais}{ABM Proceedings \faUsers}
+            \item \href{https://www.sciencedirect.com/science/article/pii/S2405896316328841}{IFAC-\textit{PapersOnLine} \faUsers}
+        \end{itemize}}\\
+
         % ----- MOST PROUD -----
         
         % \cvsection{A Day of My Life}
@@ -243,19 +256,24 @@
         
         % ----- EXPERIENCE -----
         \cvsection{Experience}
-            \cvevent{Data Engineer }{| Dextra Consulting}{12/2020 -- Present}{Remote}
+            \cvevent{Data Engineer | Data Scientist }{| Dextra Consulting}{12/2020 -- Present}{Remote}
             \begin{itemize}
-                \item Creation of Spark jobs for the execution of Machine Learning models on a Hadoop environment.
+                \item Creation of text-processing PySpark jobs for multiple client pipelines on a lakehouse architecture.
+                \item Design and implementation of a Highly Available infrastructure of a Speech-to-Text and text-processing 
+                project using GCP (Dataproc, R-MIG, Compute Engine, Firebase, Cloud Function, Build and Run).
+                \item Support and development of machine learning models for sentiment analysis.
+                \item Contributed for the creation of several PySpark jobs for multiple text-processing pipelines for 
+                different clients on a lakehouse architecture.
             \end{itemize}
             \divider
             
             \cvevent{Data Engineer }{| Samsung Electronics}{01/2020 -- 09/2020}{Campinas, Brazil}
             \begin{itemize}
-                \item Data extraction procedure automation using a distributed architecture with Apache Airflow and Docker
+                \item Data extraction procedure automation using a distributed architecture with Apache Airflow and Docker.
                 \item Creation of spark jobs for data indexing and logging of metadata.
-                \item Relational database architecture and modeling for event logging
-                \item General automation of procedures and ETLs using Bash, Python, and Docker
-                \item Development of database-interface APIs using NodeJS
+                \item Relational database architecture and modeling for event logging.
+                \item General automation of procedures and ETLs using Bash, Python, and Docker.
+                \item Development of database-interface APIs using NodeJS.
             \end{itemize}
             \divider
             
@@ -270,13 +288,13 @@
                 \item Establishment of a work flow to analyze and compare machine learning models using MLFlow.
             \end{itemize}
             \divider
-
+            \newpage
             \cvevent{Masters Scholarship }{| COPPETEC}{03/2017 -- 03/2019}{Rio de Janeiro, Brazil}
             \begin{itemize}
                 \item Development of an autonomous system for defect propagation monitoring based on acoustic emission on rigid pipes
             \end{itemize}
             \divider
-            \newpage
+            
             \cvevent{Academic Internship }{| Biomedical Engineering Program - UFRJ}{2016 -- 2017}{Rio de Janeiro, Brazil}
             \begin{itemize}
                 \item Research in applied control for bio medicine, with a focus on the rehabilitation of patients with Spasticity.
@@ -301,7 +319,7 @@
         
         % ----- PROJECTS -----
         \cvsection{Projects}
-            \cvevent{Anime Opening Rate (WIP)}{}{01/2021 -- Present}{}
+            \cvevent{Anime Opening Rate (WIP - On Hold)}{}{01/2021 -- Present}{}
             \begin{itemize}
                 \item Trying to define if it is possible to guess an anime's overall rate on My Anime List using only it's opening song. An approach using Deep Learning and classic Signal Processing techniques.
             \end{itemize}
@@ -331,10 +349,10 @@
             \end{itemize}
             \divider
             
-            \cvevent{Quadcopter Flight Control and Build }{\cvrepo{| \faBitbucket}{https://bitbucket.org/thiagolobo/ff2/src/master}\cvrepo{| \faYoutube }{https://youtu.be/nZHSf6RAbXM}}{04/2015 -- 08/2015}{}
-            \begin{itemize}
-                \item Development of the entire quadcopter's control unit using Arduino.
-            \end{itemize}
+            % \cvevent{Quadcopter Flight Control and Build }{\cvrepo{| \faBitbucket}{https://bitbucket.org/thiagolobo/ff2/src/master}\cvrepo{| \faYoutube }{https://youtu.be/nZHSf6RAbXM}}{04/2015 -- 08/2015}{}
+            % \begin{itemize}
+            %     \item Development of the entire quadcopter's control unit using Arduino.
+            % \end{itemize}
         % ----- PROJECTS -----
     \end{paracol}
 \end{document}
