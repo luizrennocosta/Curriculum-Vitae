@@ -398,10 +398,10 @@
 }
 
 % Fork: CV reference tag has been modified to accept only linkedin accounts instead mail. It can be modified easily in case you need to display other type of contact
-\newcommand{\cvref}[2]{%
+\newcommand{\cvref}[3]{%
   \textcolor{emphasis}{\textbf{#1}}\par
   \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em,align=left]
-    \item[\small\normalfont\faLinkedin]\href{https://linkedin.com/in/#2}{#2}
+    \item[\small\normalfont\faLinkedin]\href{#3}{#2}
   \end{description}
 }
 
